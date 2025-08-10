@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     :root{
-      --tan:#D2B48C;       
-      --tan-2:#E6CCB2;     
+      --tan:#D2B48C;      
+      --tan-2:#E6CCB2;    
       --ink:#2b2b2b;
       --muted:#5a4635;
       --brand:#8b5e34;
@@ -55,17 +55,20 @@
     }
     .nav a:hover{text-decoration:underline}
 
-    /* HERO */
+    /* HERO with construction image */
     .hero{
-      position:relative; color:#fff; min-height:280px;
+      position:relative; color:#fff; min-height:320px;
       display:grid; place-items:center; text-align:center;
-      background:#b58f6a url("hero.jpg") center/cover no-repeat;
+      background:
+        #b58f6a
+        url("https://images.unsplash.com/photo-1593113598332-cd6e4f0ff7b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
     }
     .hero::after{
       content:""; position:absolute; inset:0;
       background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.45));
     }
-    .hero .content{position:relative; padding:56px 18px}
+    .hero .content{position:relative; padding:64px 18px}
     .hero h1{margin:0 0 8px 0; font-size:34px; letter-spacing:.3px}
     .hero p{margin:0 auto 14px auto; max-width:720px}
     .cta{

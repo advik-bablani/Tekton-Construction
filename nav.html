@@ -4,20 +4,66 @@
   <meta charset="utf-8">
   <title>Navigation</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 16px; }
-    .brand { font-weight: bold; font-size: 18px; margin-bottom: 12px; }
-    nav a { display: block; text-decoration: none; padding: 8px 6px; border-radius: 8px; }
-    nav a:hover { background: #f2f2f2; }
-    .section { margin-top: 14px; font-size: 12px; text-transform: uppercase; color: #666; }
-    footer { margin-top: 16px; font-size: 12px; color: #666; }
+    :root {
+      --tan:#D2B48C;       
+      --tan-2:#E6CCB2;     
+      --ink:#2b2b2b;
+      --muted:#5a4635;
+      --brand:#8b5e34;
+      --brand-2:#a47148;
+      --line:#c3a375;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 12px;
+      background: var(--tan);
+      color: var(--ink);
+    }
+    .brand {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 14px;
+      text-align: center;
+      background: linear-gradient(135deg,var(--brand),var(--brand-2));
+      color: #fff;
+      padding: 12px;
+      border-radius: 8px;
+    }
+    nav a {
+      display: block;
+      text-decoration: none;
+      padding: 8px 10px;
+      margin: 4px 0;
+      border-radius: 6px;
+      background: var(--tan-2);
+      color: var(--ink);
+      border: 1px solid var(--line);
+      font-size: 14px;
+    }
+    nav a:hover {
+      background: var(--brand);
+      color: #fff;
+    }
+    .section {
+      margin-top: 14px;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    footer {
+      margin-top: 16px;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <div class="brand">Tekton Construction</div>
 
   <nav>
-    <!-- Team landing page (loads on the right frame) -->
-    <a href="home.html" target="content">🏠 Home</a>
+    <a href="home.html" target="content">Home</a>
 
     <div class="section">Pages</div>
     <a href="https://alice.github.io/eloheh/about.html" target="content">Company Story & History</a>
@@ -25,6 +71,7 @@
     <a href="https://anovelen.github.io/Team-Project-MGMT-382/" target="content">Products</a>
     <a href="https://advik-bablani.github.io/Tekton_Construction/" target="content">Services</a>
     <a href="https://tejasivasaialluri.github.io/" target="content">Customer Testimonials</a>
+  </nav>
 
   <footer>
     Last modified: <span id="lm"></span>
@@ -35,3 +82,4 @@
   </script>
 </body>
 </html>
+

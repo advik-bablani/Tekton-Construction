@@ -6,35 +6,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     :root{
-      --tan:#f5efe6; --tan-2:#efe7dc; --ink:#2b2b2b; --muted:#6b6b6b;
-      --brand:#8b5e34; --brand-2:#a47148; --line:#e5d9c8; --white:#fff;
+      --tan:#D2B48C;       
+      --tan-2:#E6CCB2;     
+      --ink:#2b2b2b;
+      --muted:#5a4635;
+      --brand:#8b5e34;
+      --brand-2:#a47148;
+      --line:#c3a375;
+      --white:#fff;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--tan);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+    html,body{
+      margin:0;
+      padding:0;
+      background:var(--tan);
+      color:var(--ink);
+      font-family:Arial,Helvetica,sans-serif;
+      line-height:1.6;
+    }
 
+    /* NAV */
     .nav{
       position:sticky; top:0; z-index:50;
-      background:rgba(245,239,230,.94); backdrop-filter:saturate(140%) blur(6px);
+      background:var(--tan-2);
       border-bottom:1px solid var(--line);
+      box-shadow:0 1px 4px rgba(0,0,0,.05);
     }
-    .nav .inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:16px;padding:10px 18px}
+    .nav .inner{
+      max-width:1100px;
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      gap:16px;
+      padding:10px 18px;
+    }
     .logo{
-      width:40px;height:40px;border-radius:10px;
+      width:40px; height:40px; border-radius:10px;
       background:linear-gradient(135deg,var(--brand),var(--brand-2));
-      display:grid;place-items:center;color:#fff;font-weight:bold
+      display:grid; place-items:center; color:#fff; font-weight:bold;
     }
     .brand{font-weight:700}
     .spacer{flex:1}
-    .nav a{color:var(--ink);text-decoration:none;margin-left:14px;font-size:14px}
+    .nav a{
+      color:var(--ink);
+      text-decoration:none;
+      margin-left:14px;
+      font-size:14px;
+    }
     .nav a:hover{text-decoration:underline}
 
+    /* HERO */
     .hero{
       position:relative; color:#fff; min-height:280px;
       display:grid; place-items:center; text-align:center;
-      background: #b58f6a url("hero.jpg") center/cover no-repeat; 
+      background:#b58f6a url("hero.jpg") center/cover no-repeat;
     }
     .hero::after{
-      content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.45));
+      content:""; position:absolute; inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.45));
     }
     .hero .content{position:relative; padding:56px 18px}
     .hero h1{margin:0 0 8px 0; font-size:34px; letter-spacing:.3px}
@@ -45,15 +74,17 @@
     }
     .cta:hover{filter:brightness(1.05)}
 
-    /* Sections */
-    .wrap{max-width:1100px;margin:0 auto;padding:26px 18px}
-    .section-title{font-size:22px;margin:0 0 12px 0}
+    /* Layout & Cards */
+    .wrap{max-width:1100px; margin:0 auto; padding:26px 18px}
+    .section-title{font-size:22px; margin:0 0 12px 0}
     .muted{color:var(--muted)}
     .grid{display:grid; gap:16px}
     .card{
       background:var(--tan-2);
-      border:1px solid var(--line); border-radius:14px; padding:16px;
-      box-shadow:0 1px 6px rgba(0,0,0,.05)
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:16px;
+      box-shadow:0 1px 6px rgba(0,0,0,.05);
     }
     .services{grid-template-columns:1fr}
     @media(min-width:900px){ .services{grid-template-columns:1fr 1fr 1fr} }
@@ -68,18 +99,27 @@
       background:#fff; border:1px solid var(--line); margin-right:6px; margin-top:6px
     }
 
-    /* Testimonial band */
+    /* Testimonial Band */
     .band{
-      background:#eadfcf; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
-      padding:22px 18px; margin:26px 0
+      background:#c9ad8a;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      padding:22px 18px; margin:26px 0;
     }
     blockquote{
-      margin:0; padding:10px 12px; border-left:4px solid var(--brand-2); background:#ffffff50; border-radius:8px
+      margin:0; padding:10px 12px;
+      border-left:4px solid var(--brand-2);
+      background:#ffffff50;
+      border-radius:8px;
     }
 
     /* Footer */
     footer{
-      border-top:1px solid var(--line); padding:16px 18px; background:var(--tan-2); color:var(--muted); font-size:12px
+      border-top:1px solid var(--line);
+      padding:16px 18px;
+      background:var(--tan-2);
+      color:var(--muted);
+      font-size:12px;
     }
     .links a{color:var(--brand); text-decoration:none}
     .links a:hover{text-decoration:underline}

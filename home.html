@@ -1,47 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>[Your Company] — Team Home</title>
+  <title>Tekton Construction — Team Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.5; margin: 24px; }
-    h1 { margin: 0 0 8px 0; }
-    .muted { color: #666; }
-    .card {
-      border: 1px solid #eee; border-radius: 12px; padding: 16px; margin-top: 16px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    :root{
+      --tan: #f5efe6;           
+      --tan-2:#efe7dc;          
+      --ink:#2b2b2b;            
+      --muted:#6b6b6b;          
+      --brand:#8b5e34;          
+      --brand-2:#a47148;        
+      --line:#e5d9c8;           
     }
-    ul { margin: 0; padding-left: 18px; }
-    footer { margin-top: 20px; font-size: 12px; color: #666; }
+    html,body{margin:0;padding:0;background:var(--tan);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    /* Header / hero */
+    .hero{
+      background: linear-gradient(180deg, rgba(139,94,52,0.06), rgba(139,94,52,0.0)),
+                  var(--tan);
+      padding: 28px 24px 22px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brandrow{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    .logo{
+      width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand-2));
+      display:grid;place-items:center;color:white;font-weight:bold;font-size:22px;box-shadow:0 2px 8px rgba(0,0,0,.08)
+    }
+    .title h1{margin:0;font-size:28px;letter-spacing:.2px}
+    .title .sub{margin-top:4px;color:var(--muted);font-size:14px}
+    .badges{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .badge{font-size:12px;padding:4px 10px;border-radius:999px;background:#fff1;border:1px solid var(--line)}
+    /* Content layout */
+    .wrap{max-width:980px;margin:18px auto 28px auto;padding:0 22px}
+    .grid{display:grid;grid-template-columns:1fr;gap:18px}
+    @media(min-width:860px){ .grid{grid-template-columns:1.2fr .8fr} }
+    .card{
+      background:var(--tan-2);border:1px solid var(--line);border-radius:14px;padding:16px;
+      box-shadow:0 1px 6px rgba(0,0,0,.05)
+    }
+    h3{margin:0 0 10px 0;font-size:18px}
+    .muted{color:var(--muted)}
+    ul,ol{margin:0 0 0 18px;padding:0}
+    .cta{
+      display:inline-block;margin-top:10px;padding:8px 14px;border-radius:10px;background:var(--brand);
+      color:#fff;border:1px solid rgba(0,0,0,.05);text-decoration:none
+    }
+    .cta:hover{filter:brightness(1.05)}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:560px){ .split{grid-template-columns:1fr} }
+    blockquote{
+      margin:0;padding:10px 12px;border-left:4px solid var(--brand-2);background:#ffffff20;border-radius:8px
+    }
+    footer{margin:18px 0 8px 0;color:var(--muted);font-size:12px}
+    .small{font-size:12px}
+    .pill{display:inline-block;padding:2px 8px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:12px}
   </style>
 </head>
 <body>
-  <h1>[Your Company Name]</h1>
-  <div class="muted">Team #[Number] &middot; Systems & Databases Project</div>
+  <!-- HERO / HEADER -->
+  <header class="hero">
+    <div class="brandrow">
+      <div class="logo">T</div>
+      <div class="title">
+        <h1>Tekton Construction</h1>
+        <div class="sub">Team <strong>[Your Team #]</strong> · Systems &amp; Databases Project</div>
+        <div class="badges">
+          <span class="badge">General Contracting</span>
+          <span class="badge">Design–Build</span>
+          <span class="badge">Pre-Construction</span>
+          <span class="badge">Safety First</span>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  <div class="card">
-    <h3>Team Members</h3>
-    <ul>
-      <li>Alexia — Story & History</li>
-      <li>Alexia — Management Team</li>
-      <li>Adam — Products</li>
-      <li>Advik — Services</li>
-      <li>Siva — Customer Testimonials</li>
-    </ul>
-  </div>
+  <!-- MAIN CONTENT -->
+  <main class="wrap">
+    <div class="grid">
+      <!-- Left column -->
+      <section class="card">
+        <h3>Who We Are</h3>
+        <p>We deliver safe, on-time, and cost-effective building solutions for commercial and residential clients across the Greater Indianapolis area. Our team brings proven scheduling, quality management, and subcontractor coordination to every job.</p>
 
-  <div class="card">
-    <h3>How to Navigate</h3>
-    <ol>
-      <li>Use the left menu to open a page in this right frame.</li>
-      <li>External links open in a new tab, so the site stays intact.</li>
-    </ol>
-  </div>
+        <div class="split" style="margin-top:10px">
+          <div class="card" style="padding:12px">
+            <h3 style="margin-bottom:6px">At a Glance</h3>
+            <ul class="small">
+              <li>Founded: <em>2014</em></li>
+              <li>Licensed &amp; insured · OSHA-aligned</li>
+              <li>Average project size: $250k–$3.2M</li>
+            </ul>
+          </div>
+          <div class="card" style="padding:12px">
+            <h3 style="margin-bottom:6px">Core Capabilities</h3>
+            <ul class="small">
+              <li>Tenant Improvements · Build-outs</li>
+              <li>Design-Build &amp; Value Engineering</li>
+              <li>Facility Maintenance Programs</li>
+            </ul>
+          </div>
+        </div>
 
-  <footer>
-    Last modified: <span id="lm"></span>
-  </footer>
+        <a class="cta" href="https://www.osha.gov/" target="_blank" rel="noopener noreferrer">Safety Standards (OSHA)</a>
+      </section>
+
+      <!-- Right column -->
+      <aside class="card">
+        <h3>Team Members</h3>
+        <ul>
+          <li>Alexia — Story &amp; History</li>
+          <li>Alexia — Management Team</li>
+          <li>Adam — Products</li>
+          <li>Advik — Services</li>
+          <li>Siva — Testimonials</li>
+        </ul>
+
+        <div style="height:10px"></div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html" target="content">Team Home</a></li>
+          <li><a href="mailto:info@tekton.example">Contact Us</a> <span class="pill">Email</span></li>
+          <li><a href="brochure.pdf" target="_blank">Download Company Brochure (PDF)</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    
+    <div class="grid" style="margin-top:18px">
+      <section class="card">
+        <h3>What Clients Say</h3>
+        <blockquote class="small">
+          “Tekton finished our renovation two weeks early and under budget. The site was immaculate and their PM
+          kept everyone informed.” — <strong>R. Patel, Facility Director</strong>
+        </blockquote>
+      </section>
+
+      <section class="card">
+        <h3>How to Navigate</h3>
+        <ol class="small">
+          <li>Use the left menu to open any page in this right frame.</li>
+          <li>External links open in a new tab so the frames stay intact.</li>
+        </ol>
+      </section>
+    </div>
+
+    <footer>
+      Last modified: <span id="lm"></span>
+    </footer>
+  </main>
+
   <script>
+    // Auto-updating "date last modified" per assignment
     document.getElementById('lm').textContent = document.lastModified;
   </script>
 </body>

@@ -1,24 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tekton Construction - Home</title>
+  <meta charset="utf-8">
+  <title>[Your Company] — Team Home</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.5; margin: 24px; }
+    h1 { margin: 0 0 8px 0; }
+    .muted { color: #666; }
+    .card {
+      border: 1px solid #eee; border-radius: 12px; padding: 16px; margin-top: 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    ul { margin: 0; padding-left: 18px; }
+    footer { margin-top: 20px; font-size: 12px; color: #666; }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif;">
-    <h1>Welcome to Tekton Construction</h1>
-    <p><strong>Team Number:</strong> 7</p>
-    <p><strong>Team Members:</strong></p>
+<body>
+  <h1>[Your Company Name]</h1>
+  <div class="muted">Team #[Number] &middot; Systems & Databases Project</div>
+
+  <div class="card">
+    <h3>Team Members</h3>
     <ul>
-        <li>Advik Bablani</li>
-        <li>Siva Alluri</li>
-        <li>Lexi Aven</li>
-        <li>Adam Novelen</li>
+      <li>Alexia — Story & History</li>
+      <li>Alexia — Management Team</li>
+      <li>Adam — Products</li>
+      <li>Advik — Services</li>
+      <li>Siva — Customer Testimonials</li>
     </ul>
+  </div>
 
-    <p id="lastModified"></p>
+  <div class="card">
+    <h3>How to Navigate</h3>
+    <ol>
+      <li>Use the left menu to open a page in this right frame.</li>
+      <li>External links open in a new tab, so the site stays intact.</li>
+    </ol>
+  </div>
 
-    <script>
-        document.getElementById("lastModified").innerHTML = 
-            "Date last modified: " + document.lastModified;
-    </script>
+  <footer>
+    Last modified: <span id="lm"></span>
+  </footer>
+  <script>
+    document.getElementById('lm').textContent = document.lastModified;
+  </script>
 </body>
 </html>

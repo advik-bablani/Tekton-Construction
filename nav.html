@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Navigation</title>
+  <meta charset="utf-8">
+  <title>Navigation</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 16px; }
+    .brand { font-weight: bold; font-size: 18px; margin-bottom: 12px; }
+    nav a { display: block; text-decoration: none; padding: 8px 6px; border-radius: 8px; }
+    nav a:hover { background: #f2f2f2; }
+    .section { margin-top: 14px; font-size: 12px; text-transform: uppercase; color: #666; }
+    footer { margin-top: 16px; font-size: 12px; color: #666; }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif;">
-    <h3>Navigation</h3>
-    <ul>
-        <li><a href="https://github.com/advik-bablani.https://github.com/advik-bablani/Tekton_Construction" target="mainFrame">Company Story</a></li>
-        <li><a href="https://USERNAME2.github.io/REPO2" target="mainFrame">Management Team</a></li>
-        <li><a href="https://USERNAME3.github.io/REPO3" target="mainFrame">Products</a></li>
-        <li><a href="https://USERNAME4.github.io/REPO4" target="mainFrame">Services</a></li>
-        <li><a href="https://USERNAME5.github.io/REPO5" target="mainFrame">Testimonials</a></li>
-    </ul>
+<body>
+  <div class="brand">[Your Company Name]</div>
 
-    <p id="lastModified"></p>
+  <nav>
+    <!-- Team landing page (loads on the right frame) -->
+    <a href="home.html" target="content">🏠 Team Home</a>
 
-    <script>
-        document.getElementById("lastModified").innerHTML = 
-            "Date last modified: " + document.lastModified;
-    </script>
+    <!-- Link each individual page below (target must be "content") -->
+    <div class="section">Pages</div>
+    <a href="https://alice.github.io/eloheh/about.html" target="content">Company Story & History</a>
+    <a href="https://bob.github.io/eloheh/team.html" target="content">Management Team</a>
+    <a href="https://carol.github.io/eloheh/products.html" target="content">Products</a>
+    <a href="https://advik-bablani.github.io/Tekton_Construction/" target="content">Services</a>
+    <a href="https://erin.github.io/eloheh/testimonials.html" target="content">Customer Testimonials</a>
+
+    <!-- Example external link (must NOT replace your site; use _blank) -->
+    <div class="section">External</div>
+    <a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">
+      HTML Reference (opens new tab)
+    </a>
+  </nav>
+
+  <footer>
+    Last modified: <span id="lm"></span>
+  </footer>
+
+  <script>
+    // Auto-fill “date last modified” (required)
+    document.getElementById('lm').textContent = document.lastModified;
+  </script>
 </body>
 </html>
